@@ -1,0 +1,12 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>{{repository.name}}</mat-card-title>
+    <mat-card-subtitle>{{repository.owner.login}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>Here is repository's link:</p>
+    <a [href]="repository.html_url">{{repository.html_url}}</a>
+    <p>Here is owner's link:</p>
+    <a [href]="repository.owner.html_url">{{repository.owner.html_url}}</a>
+  </mat-card-content>
+</mat-card>

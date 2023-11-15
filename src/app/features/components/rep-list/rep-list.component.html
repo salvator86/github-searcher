@@ -1,0 +1,11 @@
+<ng-container *ngIf="repoList.length; else repositoriesIsEmpty">
+  <div class="list">
+    <ng-container *ngFor="let repo of repoList">
+      <app-rep-item [repository]="repo"></app-rep-item>
+    </ng-container>
+  </div>
+</ng-container>
+<ng-template #repositoriesIsEmpty>
+  <p *ngIf="!githubService.isFirstTimeTake" class="not-founded">There are any repositories founded</p>
+</ng-template>
+
